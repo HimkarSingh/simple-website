@@ -1,0 +1,1318 @@
+
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="{{project.meta.ogDescription}}">
+      <meta name="theme-color" content="#ffffff">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="robots" content="{{project.meta.robotsMeta}}">
+      
+       <title>Himkar</title>
+       <link rel="icon" type="image/jpeg"  href="OIG2.jpeg">
+
+      <!-- SEO Description -->
+      <meta name="description" content="{{project.seoDescription}}">
+      <!-- Performance optimization: Preload critical resources -->
+      <link rel="preload" href="https://cdn.tailwindcss.com" as="script">
+      <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" as="style">
+      
+      <!-- {headerScripts} -->
+
+      <!-- Core CSS -->
+      <script src="https://cdn.tailwindcss.com"></script>
+      <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+             colors: {
+                primary: {
+                  50: '#f8f8f8',
+                  100: '#e8e8e8',
+                  200: '#d3d3d3',
+                  300: '#a3a3a3',
+                  400: '#737373',
+                  500: '#525252',
+                  600: '#404040',
+                  700: '#262626',
+                  800: '#171717',
+                  900: '#0a0a0a',
+                  950: '#030303',
+                },
+                secondary: {
+                  50: '#f8f8f8',
+                  100: '#e8e8e8',
+                  200: '#d3d3d3',
+                  300: '#a3a3a3',
+                  400: '#737373',
+                  500: '#525252',
+                  600: '#404040',
+                  700: '#262626',
+                  800: '#171717',
+                  900: '#0a0a0a',
+                  950: '#030303',
+                },
+                accent: {
+                  50: '#f8f8f8',
+                  100: '#e8e8e8',
+                  200: '#d3d3d3',
+                  300: '#a3a3a3',
+                  400: '#737373',
+                  500: '#525252',
+                  600: '#404040',
+                  700: '#262626',
+                  800: '#171717',
+                  900: '#0a0a0a',
+                  950: '#030303',
+                },
+              },
+              fontFamily: {
+                sans: ['Inter', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', 'sans-serif'],
+                heading: ['Montserrat', 'Inter', 'system-ui', 'sans-serif'],
+              },
+              spacing: {
+                '18': '4.5rem',
+                '22': '5.5rem',
+                '30': '7.5rem',
+              },
+              maxWidth: {
+                '8xl': '88rem',
+                '9xl': '96rem',
+              },
+              animation: {
+                'fade-in': 'fadeIn 0.5s ease-in',
+                'fade-out': 'fadeOut 0.5s ease-out',
+                'slide-up': 'slideUp 0.5s ease-out',
+                'slide-down': 'slideDown 0.5s ease-out',
+                'slide-left': 'slideLeft 0.5s ease-out',
+                'slide-right': 'slideRight 0.5s ease-out',
+                'scale-in': 'scaleIn 0.5s ease-out',
+                'scale-out': 'scaleOut 0.5s ease-out',
+                'spin-slow': 'spin 3s linear infinite',
+                'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                'bounce-slow': 'bounce 3s infinite',
+                'float': 'float 3s ease-in-out infinite',
+              },
+              keyframes: {
+                fadeIn: {
+                  '0%': { opacity: '0' },
+                  '100%': { opacity: '1' },
+                },
+                fadeOut: {
+                  '0%': { opacity: '1' },
+                  '100%': { opacity: '0' },
+                },
+                slideUp: {
+                  '0%': { transform: 'translateY(20px)', opacity: '0' },
+                  '100%': { transform: 'translateY(0)', opacity: '1' },
+                },
+                slideDown: {
+                  '0%': { transform: 'translateY(-20px)', opacity: '0' },
+                  '100%': { transform: 'translateY(0)', opacity: '1' },
+                },
+                slideLeft: {
+                  '0%': { transform: 'translateX(20px)', opacity: '0' },
+                  '100%': { transform: 'translateX(0)', opacity: '1' },
+                },
+                slideRight: {
+                  '0%': { transform: 'translateX(-20px)', opacity: '0' },
+                  '100%': { transform: 'translateX(0)', opacity: '1' },
+                },
+                scaleIn: {
+                  '0%': { transform: 'scale(0.9)', opacity: '0' },
+                  '100%': { transform: 'scale(1)', opacity: '1' },
+                },
+                scaleOut: {
+                  '0%': { transform: 'scale(1.1)', opacity: '0' },
+                  '100%': { transform: 'scale(1)', opacity: '1' },
+                },
+                float: {
+                  '0%, 100%': { transform: 'translateY(0)' },
+                  '50%': { transform: 'translateY(-10px)' },
+                },
+              },
+              aspectRatio: {
+                'portrait': '3/4',
+                'landscape': '4/3',
+                'ultrawide': '21/9',
+              },
+            },
+          },
+          variants: {
+            extend: {
+              opacity: ['disabled'],
+              cursor: ['disabled'],
+              backgroundColor: ['active', 'disabled'],
+              textColor: ['active', 'disabled'],
+            },
+          },
+        }
+      </script>
+
+      <!-- Utilities and Components -->
+      <script defer src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/3.13.3/cdn.min.js"></script>
+      <script defer src="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.45.1/apexcharts.min.js"></script>
+      
+      <!-- Optimized Font Loading -->
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+      
+      <!-- Icons -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" 
+            integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+      <!-- Dynamic Meta Tags -->
+      <meta name="description" content="{{project.meta.ogDescription}}">
+      <meta name="keywords" content="{{project.meta.keywords}}">
+      <meta name="robots" content="{{project.meta.robotsMeta}}">
+      <meta name="google-site-verification" content="{{project.meta.googleVerification}}">
+      <meta name="baidu-verification" content="{{project.meta.baiduVerification}}">
+      <meta name="yandex-verification" content="{{project.meta.yandexVerification}}">
+      <meta name="bing-verification" content="{{project.meta.bingVerification}}">
+      <meta property="og:title" content="{{project.meta.ogTitle}}">
+      <meta property="og:description" content="{{project.meta.ogDescription}}">
+      <meta property="og:image" content="{{project.meta.ogImage}}">
+      <meta property="og:type" content="website">
+      <meta property="og:locale" content="en_US">
+      <meta property="og:site_name" content="{{project.name}}">
+      <meta name="twitter:card" content="summary_large_image">
+      <meta name="twitter:title" content="{{project.meta.ogTitle}}">
+      <meta name="twitter:description" content="{{project.meta.ogDescription}}">
+      <meta name="twitter:image" content="{{project.meta.ogImage}}">
+
+      <!-- Base Styles -->
+      <style>
+      * {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;     /* Firefox */
+}
+
+/* Webkit browsers like Chrome, Safari, newer Edge */
+*::-webkit-scrollbar {
+  display: none;
+  width: 0;
+  height: 0;
+}
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+          width: 0px;
+        }
+        
+        ::-webkit-scrollbar-track {
+          background: #f1f1f1;
+          border-radius: 4px;
+        }
+        
+        ::-webkit-scrollbar-thumb {
+          background: #888;
+          border-radius: 4px;
+        }
+        
+        ::-webkit-scrollbar-thumb:hover {
+          background: #666;
+        }
+
+        /* Remove tap highlight on mobile */
+        * {
+          -webkit-tap-highlight-color: transparent;
+        }
+
+        /* Improve text rendering */
+        body {
+          text-rendering: optimizeLegibility;
+          -webkit-font-smoothing: antialiased;
+          -moz-osx-font-smoothing: grayscale;
+        }
+
+        /* Focus outline styles */
+        :focus-visible {
+          outline: 2px solid currentColor;
+          outline-offset: 2px;
+        }
+
+        /* Print styles */
+        @media print {
+          .no-print {
+            display: none !important;
+          }
+          
+          a[href]:after {
+            content: " (" attr(href) ")";
+          }
+        }
+      </style>
+
+      <!-- Enhanced Image Handler -->
+      <script>
+        document.addEventListener('DOMContentLoaded', () => {
+          const imageObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+              if (entry.isIntersecting) {
+                const img = entry.target;
+                if (img.dataset.src) {
+                  const tempImage = new Image();
+                  tempImage.onload = () => {
+                    img.src = img.dataset.src;
+                    img.classList.remove('opacity-0');
+                    img.classList.add('opacity-100');
+                  };
+                  tempImage.src = img.dataset.src;
+                  img.removeAttribute('data-src');
+                  observer.unobserve(img);
+                }
+              }
+            });
+          }, {
+            rootMargin: '50px 0px',
+            threshold: 0.01
+          });
+
+          const loadImage = (img) => {
+            if ('loading' in HTMLImageElement.prototype) {
+              img.loading = 'lazy';
+            }
+            
+            img.classList.add('transition-opacity', 'duration-300', 'opacity-0');
+            
+            img.onerror = () => {
+              const width = img.getAttribute('width') || img.clientWidth || 300;
+              const height = img.getAttribute('height') || img.clientHeight || 200;
+              img.src = `https://placehold.co/${width}x${height}/DEDEDE/555555?text=Image+Unavailable`;
+              img.alt = 'Image unavailable';
+              img.classList.remove('opacity-0');
+              img.classList.add('opacity-100', 'error-image');
+            };
+
+            if (img.dataset.src) {
+              imageObserver.observe(img);
+            } else {
+              img.classList.remove('opacity-0');
+              img.classList.add('opacity-100');
+            }
+          };
+
+          document.querySelectorAll('img[data-src], img:not([data-src])').forEach(loadImage);
+
+          // Watch for dynamically added images
+          new MutationObserver((mutations) => {
+            mutations.forEach(mutation => {
+              mutation.addedNodes.forEach(node => {
+                if (node.nodeType === 1) {
+                  if (node.tagName === 'IMG') {
+                    loadImage(node);
+                  }
+                  node.querySelectorAll('img').forEach(loadImage);
+                }
+              });
+            });
+          }).observe(document.body, {
+            childList: true,
+            subtree: true
+          });
+        });
+
+        // Performance monitoring
+        if ('performance' in window && 'PerformanceObserver' in window) {
+          // Create performance observer
+          const observer = new PerformanceObserver((list) => {
+            const entries = list.getEntries();
+            entries.forEach((entry) => {
+              if (entry.entryType === 'largest-contentful-paint') {
+                // console.log(`LCP: ${entry.startTime}ms`);
+              }
+              if (entry.entryType === 'first-input') {
+                // console.log(`FID: ${entry.processingStart - entry.startTime}ms`);
+              }
+              if (entry.entryType === 'layout-shift') {
+                // console.log(`CLS: ${entry.value}`);
+              }
+            });
+          });
+
+          // Observe performance metrics
+          observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'layout-shift'] });
+
+          // Log basic performance metrics
+          window.addEventListener('load', () => {
+            const timing = performance.getEntriesByType('navigation')[0];
+            console.log({
+              'DNS Lookup': timing.domainLookupEnd - timing.domainLookupStart,
+              'TCP Connection': timing.connectEnd - timing.connectStart,
+              'DOM Content Loaded': timing.domContentLoadedEventEnd - timing.navigationStart,
+              'Page Load': timing.loadEventEnd - timing.navigationStart
+            });
+          });
+        }
+
+        // Handle offline/online status
+        window.addEventListener('online', () => {
+          document.body.classList.remove('offline');
+          console.log('Connection restored');
+        });
+        
+        window.addEventListener('offline', () => {
+          document.body.classList.add('offline');
+          console.log('Connection lost');
+        });
+      </script>
+   </head>
+   <body class="antialiased text-gray-800 min-h-screen flex flex-col">
+      <!-- Skip to main content link for accessibility -->
+      <a href="#main-content" 
+         class="sr-only focus:not-sr-only focus:absolute focus:top-0 focus:left-0 focus:z-50 focus:p-4 focus:bg-white focus:text-black">
+         Skip to main content
+      </a>
+
+      <!-- Header -->
+      <header class="relative z-50 bg-white dark:bg-gray-900">
+        <!-- Header content goes here -->
+      </header>
+
+      <!-- Main content area -->
+      <main id="main-content" class="flex-1 relative ">
+        <!-- Content will be injected here -->
+      </main>
+
+      <!-- {bodyScripts} -->
+
+   </body>
+</html><element id="fb6ad43f-c037-4535-8441-e9051f1544c5" data-section-id="fb6ad43f-c037-4535-8441-e9051f1544c5">
+
+<htmlCode>
+<div id="root">
+  <nav id="navbar" class="fixed w-full z-50 bg-neutral-900 border-b border-neutral-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between h-16">
+        <div class="flex items-center">
+          <a href="#" class="text-xl font-bold text-white">Himkar Singh</a>
+        </div>
+        
+        <!-- Desktop Menu -->
+        <div class="hidden md:flex items-center space-x-8">
+          <a href="#about" class="text-neutral-300 hover:text-white transition-colors">About</a>
+          <a href="#graphics-portfolio" class="text-neutral-300 hover:text-white transition-colors">Graphics</a>
+          <a href="#video-editing" class="text-neutral-300 hover:text-white transition-colors">Video</a>
+          <a href="#cybersecurity" class="text-neutral-300 hover:text-white transition-colors">Security</a>
+          <a href="#skills" class="text-neutral-300 hover:text-white transition-colors">Skills</a>
+          <a href="#projects" class="text-neutral-300 hover:text-white transition-colors">Projects</a>
+          <a href="#contact" class="text-neutral-300 hover:text-white transition-colors">Contact</a>
+        </div>
+
+        <!-- Mobile menu button -->
+        <div class="md:hidden flex items-center">
+          <button id="mobile-menu-button" class="text-neutral-300 hover:text-white focus:outline-none">
+            <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden bg-neutral-900 animate__animated animate__fadeIn">
+      <div class="px-2 pt-2 pb-3 space-y-1">
+        <a href="#about" class="block px-3 py-2 text-neutral-300 hover:text-white">About</a>
+        <a href="#graphics-portfolio" class="block px-3 py-2 text-neutral-300 hover:text-white">Graphics</a>
+        <a href="#video-editing" class="block px-3 py-2 text-neutral-300 hover:text-white">Video</a>
+        <a href="#cybersecurity" class="block px-3 py-2 text-neutral-300 hover:text-white">Security</a>
+        <a href="#skills" class="block px-3 py-2 text-neutral-300 hover:text-white">Skills</a>
+        <a href="#projects" class="block px-3 py-2 text-neutral-300 hover:text-white">Projects</a>
+        <a href="#contact" class="block px-3 py-2 text-neutral-300 hover:text-white">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <script>
+    const mobileMenuButton = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+    
+    mobileMenuButton.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+
+    // Close mobile menu when clicking outside
+    document.addEventListener('click', (e) => {
+      if (!mobileMenuButton.contains(e.target) && !mobileMenu.contains(e.target)) {
+        mobileMenu.classList.add('hidden');
+      }
+    });
+
+    // Close mobile menu when clicking on a link
+    const mobileLinks = mobileMenu.querySelectorAll('a');
+    mobileLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+      });
+    });
+  </script>
+</div>
+</htmlCode></element><element id="41ec637c-6f3d-4e4f-9a91-53aaf83a92b4" data-section-id="41ec637c-6f3d-4e4f-9a91-53aaf83a92b4">
+
+<htmlCode>
+<div id="root">
+  <section id="hero" class="pt-16 min-h-[70vh] bg-neutral-900 relative overflow-hidden">
+    <div class="absolute inset-0">
+      <div class="absolute inset-0 bg-gradient-to-r from-blue-500/10 to-purple-500/10 animate__animated animate__fadeIn"></div>
+      <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-neutral-900 via-neutral-900/90 to-neutral-900/80"></div>
+    </div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="flex flex-col lg:flex-row items-center justify-between pt-20 lg:pt-32">
+        <div class="lg:w-1/2 animate__animated animate__fadeInLeft">
+          <h1 class="text-4xl md:text-6xl font-bold text-white mb-6">
+            Hi, I'm <span class="bg-gradient-to-r from-blue-500 to-purple-500 text-transparent bg-clip-text">Himkar Singh</span>
+          </h1>
+          <p class="text-xl md:text-2xl text-neutral-300 mb-8">
+            A passionate 19-year-old exploring the realms of
+            <span class="typing-text font-medium text-white"></span>
+          </p>
+          <div class="flex gap-4">
+            <a href="#contact" class="px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-colors">
+              Contact Me
+            </a>
+            <a href="#about" class="px-6 py-3 border border-neutral-700 hover:border-neutral-600 text-white rounded-lg transition-colors">
+              Learn More
+            </a>
+          </div>
+        </div>
+
+        <div class="lg:w-1/2 mt-12 lg:mt-0 animate__animated animate__fadeInRight">
+          <div class="relative w-64 h-64 mx-auto">
+            <div class="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full animate-pulse"></div>
+            <div class="absolute inset-2 bg-neutral-900 rounded-full"></div>
+            <div class="absolute inset-4 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full opacity-50"></div>
+            <img src="OIG2.jpeg" alt="Profile Picture" class="absolute inset-4 w-56 h-56 rounded-full object-cover">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+
+  <script>
+    const typingText = document.querySelector('.typing-text');
+    const words = ['Cybersecurity', 'Video Editing', 'Graphics Design', 'Technology'];
+    let wordIndex = 0;
+    let charIndex = 0;
+    let isDeleting = false;
+
+    function type() {
+      const currentWord = words[wordIndex];
+      
+      if (isDeleting) {
+        typingText.textContent = currentWord.substring(0, charIndex - 1);
+        charIndex--;
+      } else {
+        typingText.textContent = currentWord.substring(0, charIndex + 1);
+        charIndex++;
+      }
+
+      if (!isDeleting && charIndex === currentWord.length) {
+        isDeleting = true;
+        setTimeout(type, 1500);
+      } else if (isDeleting && charIndex === 0) {
+        isDeleting = false;
+        wordIndex = (wordIndex + 1) % words.length;
+        setTimeout(type, 500);
+      } else {
+        setTimeout(type, isDeleting ? 50 : 100);
+      }
+    }
+
+    type();
+  </script>
+</div>
+</htmlCode></element><element id="ec8b06c5-6976-402e-850e-cfe19f06fa46" data-section-id="ec8b06c5-6976-402e-850e-cfe19f06fa46">
+
+<htmlCode>
+<div id="root">
+  <section id="about" class="py-20 bg-neutral-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16 animate__animated animate__fadeIn">
+        <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">About Me</h2>
+        <div class="w-20 h-1 bg-blue-500 mx-auto"></div>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div class="space-y-6 animate__animated animate__fadeInLeft">
+          <div class="bg-neutral-900 p-6 rounded-lg border border-neutral-700">
+            <h3 class="text-2xl font-bold text-white mb-4">Who Am I?</h3>
+            <p class="text-neutral-300 leading-relaxed">
+              I'm a 19-year-old tech enthusiast with a passion for exploring the digital frontier. My journey spans across various domains of technology, from creating visually stunning designs to securing digital landscapes.
+            </p>
+          </div>
+
+          <div class="bg-neutral-900 p-6 rounded-lg border border-neutral-700">
+            <h3 class="text-2xl font-bold text-white mb-4">What I Do</h3>
+            <ul class="text-neutral-300 space-y-3">
+              <li class="flex items-center">
+                <svg class="w-5 h-5 text-blue-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+                Graphics Design with modern tools and AI integration
+              </li>
+              <li class="flex items-center">
+                <svg class="w-5 h-5 text-blue-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+                Professional Video Editing and Content Creation
+              </li>
+              <li class="flex items-center">
+                <svg class="w-5 h-5 text-blue-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+                Cybersecurity Research and Bug Bounty Hunting
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="animate__animated animate__fadeInRight">
+          <div class="bg-neutral-900 p-6 rounded-lg border border-neutral-700">
+            <h3 class="text-2xl font-bold text-white mb-4">My Journey</h3>
+            <div class="space-y-4">
+              <div class="flex items-start">
+                <div class="flex-shrink-0">
+                  <div class="w-4 h-4 rounded-full bg-blue-500 mt-2"></div>
+                </div>
+                <div class="ml-4">
+                  <h4 class="text-white font-semibold">Started Graphics Design</h4>
+                  <p class="text-neutral-400">Mastered industry-standard tools like Illustrator, Photoshop, and Figma</p>
+                </div>
+              </div>
+              <div class="flex items-start">
+                <div class="flex-shrink-0">
+                  <div class="w-4 h-4 rounded-full bg-purple-500 mt-2"></div>
+                </div>
+                <div class="ml-4">
+                  <h4 class="text-white font-semibold">Video Editing Journey</h4>
+                  <p class="text-neutral-400">Advanced proficiency in Premiere Pro and content creation</p>
+                </div>
+              </div>
+              <div class="flex items-start">
+                <div class="flex-shrink-0">
+                  <div class="w-4 h-4 rounded-full bg-green-500 mt-2"></div>
+                </div>
+                <div class="ml-4">
+                  <h4 class="text-white font-semibold">Cybersecurity Exploration</h4>
+                  <p class="text-neutral-400">Currently focused on bug bounty and penetration testing</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="mt-6 flex justify-center space-x-4">
+            <a href="https://github.com" target="_blank" class="text-neutral-400 hover:text-white transition-colors">
+              <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+            </a>
+            <a href="https://linkedin.com" target="_blank" class="text-neutral-400 hover:text-white transition-colors">
+              <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            </a>
+            <a href="https://discord.com" target="_blank" class="text-neutral-400 hover:text-white transition-colors">
+              <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24"><path d="M20.317 4.37a19.791 19.791 0 00-4.885-1.515.074.074 0 00-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 00-5.487 0 12.64 12.64 0 00-.617-1.25.077.077 0 00-.079-.037A19.736 19.736 0 003.677 4.37a.07.07 0 00-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 00.031.057 19.9 19.9 0 005.993 3.03.078.078 0 00.084-.028c.462-.63.874-1.295 1.226-1.994.021-.041.001-.09-.041-.106a13.107 13.107 0 01-1.872-.892.077.077 0 01-.008-.128 10.2 10.2 0 00.372-.292.074.074 0 01.077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 01.078.01c.12.098.246.198.373.292a.077.077 0 01-.006.127 12.299 12.299 0 01-1.873.892.077.077 0 00-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 00.084.028 19.839 19.839 0 006.002-3.03.077.077 0 00.032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 00-.031-.03zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.157 2.418z"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+</htmlCode></element><element id="60efed9f-48e0-4120-a5ad-fcab5ad2c13e" data-section-id="60efed9f-48e0-4120-a5ad-fcab5ad2c13e">
+
+<htmlCode>
+<div id="root">
+  <section id="graphics-portfolio" class="py-20 bg-neutral-900">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16 animate__animated animate__fadeIn">
+        <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Graphics Design</h2>
+        <div class="w-20 h-1 bg-purple-500 mx-auto"></div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Design Tools -->
+        <div class="bg-neutral-800 rounded-xl p-6 hover:transform hover:scale-105 transition-all duration-300 animate__animated animate__fadeInUp">
+          <div class="h-16 w-16 bg-gradient-to-r from-purple-500 to-blue-500 rounded-lg flex items-center justify-center mb-6">
+            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-4">Adobe Suite</h3>
+          <ul class="text-neutral-300 space-y-2">
+            <li class="flex items-center">
+              <span class="w-2 h-2 bg-purple-500 rounded-full mr-2"></span>
+              Illustrator
+            </li>
+            <li class="flex items-center">
+              <span class="w-2 h-2 bg-blue-500 rounded-full mr-2"></span>
+              Photoshop
+            </li>
+          </ul>
+        </div>
+
+        <!-- Modern Tools -->
+        <div class="bg-neutral-800 rounded-xl p-6 hover:transform hover:scale-105 transition-all duration-300 animate__animated animate__fadeInUp" style="animation-delay: 0.2s;">
+          <div class="h-16 w-16 bg-gradient-to-r from-green-500 to-teal-500 rounded-lg flex items-center justify-center mb-6">
+            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-4">Modern Design Tools</h3>
+          <ul class="text-neutral-300 space-y-2">
+            <li class="flex items-center">
+              <span class="w-2 h-2 bg-green-500 rounded-full mr-2"></span>
+              Figma
+            </li>
+            <li class="flex items-center">
+              <span class="w-2 h-2 bg-teal-500 rounded-full mr-2"></span>
+              Canva
+            </li>
+          </ul>
+        </div>
+
+        <!-- AI Integration -->
+        <div class="bg-neutral-800 rounded-xl p-6 hover:transform hover:scale-105 transition-all duration-300 animate__animated animate__fadeInUp" style="animation-delay: 0.4s;">
+          <div class="h-16 w-16 bg-gradient-to-r from-red-500 to-pink-500 rounded-lg flex items-center justify-center mb-6">
+            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-4">AI Tools Integration</h3>
+          <ul class="text-neutral-300 space-y-2">
+            <li class="flex items-center">
+              <span class="w-2 h-2 bg-red-500 rounded-full mr-2"></span>
+              Midjourney
+            </li>
+            <li class="flex items-center">
+              <span class="w-2 h-2 bg-pink-500 rounded-full mr-2"></span>
+              DALL-E
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="mt-16 text-center">
+        <h3 class="text-2xl font-bold text-white mb-8">Design Process</h3>
+        <div class="flex flex-wrap justify-center gap-6">
+          <div class="w-full md:w-64 bg-neutral-800 rounded-lg p-6 animate__animated animate__fadeInUp">
+            <div class="text-4xl font-bold text-purple-500 mb-4">01</div>
+            <h4 class="text-lg font-semibold text-white mb-2">Conceptualization</h4>
+            <p class="text-neutral-400">Initial brainstorming and concept development</p>
+          </div>
+          <div class="w-full md:w-64 bg-neutral-800 rounded-lg p-6 animate__animated animate__fadeInUp" style="animation-delay: 0.2s;">
+            <div class="text-4xl font-bold text-blue-500 mb-4">02</div>
+            <h4 class="text-lg font-semibold text-white mb-2">Design</h4>
+            <p class="text-neutral-400">Creating visual elements and layouts</p>
+          </div>
+          <div class="w-full md:w-64 bg-neutral-800 rounded-lg p-6 animate__animated animate__fadeInUp" style="animation-delay: 0.4s;">
+            <div class="text-4xl font-bold text-green-500 mb-4">03</div>
+            <h4 class="text-lg font-semibold text-white mb-2">Refinement</h4>
+            <p class="text-neutral-400">Polishing and perfecting the final design</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+</htmlCode></element><element id="144d249b-c622-4612-b5eb-c9ca4db2de28" data-section-id="144d249b-c622-4612-b5eb-c9ca4db2de28">
+
+<htmlCode>
+<div id="root">
+  <section id="video-editing" class="py-20 bg-neutral-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16 animate__animated animate__fadeIn">
+        <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Video Editing</h2>
+        <div class="w-20 h-1 bg-green-500 mx-auto"></div>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+        <!-- Skills Section -->
+        <div class="space-y-8 animate__animated animate__fadeInLeft">
+          <div class="bg-neutral-900 rounded-xl p-8 border border-neutral-700">
+            <h3 class="text-2xl font-bold text-white mb-6">Technical Expertise</h3>
+            
+            <!-- Premiere Pro -->
+            <div class="mb-6">
+              <div class="flex justify-between items-center mb-2">
+                <span class="text-white">Adobe Premiere Pro</span>
+                <span class="text-green-500">95%</span>
+              </div>
+              <div class="h-2 bg-neutral-700 rounded-full">
+                <div class="h-full w-[95%] bg-gradient-to-r from-green-500 to-green-400 rounded-full"></div>
+              </div>
+            </div>
+
+            <!-- After Effects -->
+            <div class="mb-6">
+              <div class="flex justify-between items-center mb-2">
+                <span class="text-white">After Effects</span>
+                <span class="text-blue-500">85%</span>
+              </div>
+              <div class="h-2 bg-neutral-700 rounded-full">
+                <div class="h-full w-[85%] bg-gradient-to-r from-blue-500 to-blue-400 rounded-full"></div>
+              </div>
+            </div>
+
+            <!-- Color Grading -->
+            <div class="mb-6">
+              <div class="flex justify-between items-center mb-2">
+                <span class="text-white">Color Grading</span>
+                <span class="text-purple-500">90%</span>
+              </div>
+              <div class="h-2 bg-neutral-700 rounded-full">
+                <div class="h-full w-[90%] bg-gradient-to-r from-purple-500 to-purple-400 rounded-full"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-neutral-900 rounded-xl p-8 border border-neutral-700">
+            <h3 class="text-2xl font-bold text-white mb-6">Specializations</h3>
+            <div class="grid grid-cols-2 gap-4">
+              <div class="flex items-center space-x-3">
+                <div class="w-10 h-10 bg-green-500/20 rounded-lg flex items-center justify-center">
+                  <svg class="w-6 h-6 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"></path>
+                  </svg>
+                </div>
+                <span class="text-white">Motion Graphics</span>
+              </div>
+              <div class="flex items-center space-x-3">
+                <div class="w-10 h-10 bg-blue-500/20 rounded-lg flex items-center justify-center">
+                  <svg class="w-6 h-6 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 10l-2 1m0 0l-2-1m2 1v2.5M20 7l-2 1m2-1l-2-1m2 1v2.5M14 4l-2-1-2 1M4 7l2-1M4 7l2 1M4 7v2.5M12 21l-2-1m2 1l2-1m-2 1v-2.5M6 18l-2-1v-2.5M18 18l2-1v-2.5"></path>
+                  </svg>
+                </div>
+                <span class="text-white">Visual Effects</span>
+              </div>
+              <div class="flex items-center space-x-3">
+                <div class="w-10 h-10 bg-purple-500/20 rounded-lg flex items-center justify-center">
+                  <svg class="w-6 h-6 text-purple-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3"></path>
+                  </svg>
+                </div>
+                <span class="text-white">Sound Design</span>
+              </div>
+              <div class="flex items-center space-x-3">
+                <div class="w-10 h-10 bg-red-500/20 rounded-lg flex items-center justify-center">
+                  <svg class="w-6 h-6 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path>
+                  </svg>
+                </div>
+                <span class="text-white">Color Theory</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Projects Showcase -->
+        <div class="space-y-8 animate__animated animate__fadeInRight">
+          <div class="bg-neutral-900 rounded-xl p-8 border border-neutral-700">
+            <h3 class="text-2xl font-bold text-white mb-6">Recent Projects</h3>
+            <div class="space-y-6">
+              <div class="p-4 bg-neutral-800 rounded-lg">
+                <h4 class="text-lg font-semibold text-white mb-2">Cinematic Showreel</h4>
+                <p class="text-neutral-400 mb-4">A compilation of my best video editing work showcasing various styles and techniques.</p>
+                <div class="flex items-center text-sm text-neutral-500">
+                  <span class="mr-4">Duration: 3:45</span>
+                  <span>Tools: Premiere Pro, After Effects</span>
+                </div>
+              </div>
+              <div class="p-4 bg-neutral-800 rounded-lg">
+                <h4 class="text-lg font-semibold text-white mb-2">Motion Graphics Demo</h4>
+                <p class="text-neutral-400 mb-4">Abstract visual storytelling through dynamic motion graphics and typography.</p>
+                <div class="flex items-center text-sm text-neutral-500">
+                  <span class="mr-4">Duration: 2:30</span>
+                  <span>Tools: After Effects, Illustrator</span>
+                </div>
+              </div>
+              <div class="p-4 bg-neutral-800 rounded-lg">
+                <h4 class="text-lg font-semibold text-white mb-2">Commercial Edit</h4>
+                <p class="text-neutral-400 mb-4">High-energy product showcase with advanced color grading and effects.</p>
+                <div class="flex items-center text-sm text-neutral-500">
+                  <span class="mr-4">Duration: 1:15</span>
+                  <span>Tools: Premiere Pro, DaVinci Resolve</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+</htmlCode></element><element id="f58a4045-fea0-4a3c-8527-ce51f91052e5" data-section-id="f58a4045-fea0-4a3c-8527-ce51f91052e5">
+
+<htmlCode>
+<div id="root">
+  <section id="cybersecurity" class="py-20 bg-neutral-900">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16 animate__animated animate__fadeIn">
+        <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Cybersecurity</h2>
+        <div class="w-20 h-1 bg-red-500 mx-auto"></div>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        <!-- Bug Bounty Skills -->
+        <div class="bg-neutral-800 rounded-xl p-8 border border-neutral-700 animate__animated animate__fadeInLeft">
+          <div class="h-16 w-16 bg-gradient-to-r from-red-500 to-orange-500 rounded-lg flex items-center justify-center mb-6">
+            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+            </svg>
+          </div>
+          <h3 class="text-2xl font-bold text-white mb-4">Bug Bounty</h3>
+          <ul class="space-y-3 text-neutral-300">
+            <li class="flex items-center">
+              <span class="w-2 h-2 bg-red-500 rounded-full mr-2"></span>
+              Web Application Testing
+            </li>
+            <li class="flex items-center">
+              <span class="w-2 h-2 bg-orange-500 rounded-full mr-2"></span>
+              Vulnerability Assessment
+            </li>
+            <li class="flex items-center">
+              <span class="w-2 h-2 bg-yellow-500 rounded-full mr-2"></span>
+              Security Research
+            </li>
+          </ul>
+        </div>
+
+        <!-- Current Learning -->
+        <div class="bg-neutral-800 rounded-xl p-8 border border-neutral-700 animate__animated animate__fadeInUp">
+          <div class="h-16 w-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center mb-6">
+            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+            </svg>
+          </div>
+          <h3 class="text-2xl font-bold text-white mb-4">Current Focus</h3>
+          <div class="space-y-4">
+            <div class="bg-neutral-900 p-4 rounded-lg">
+              <h4 class="text-white font-semibold mb-2">Network Security</h4>
+              <div class="w-full bg-neutral-700 rounded-full h-2">
+                <div class="bg-blue-500 h-2 rounded-full" style="width: 75%"></div>
+              </div>
+            </div>
+            <div class="bg-neutral-900 p-4 rounded-lg">
+              <h4 class="text-white font-semibold mb-2">Ethical Hacking</h4>
+              <div class="w-full bg-neutral-700 rounded-full h-2">
+                <div class="bg-cyan-500 h-2 rounded-full" style="width: 85%"></div>
+              </div>
+            </div>
+            <div class="bg-neutral-900 p-4 rounded-lg">
+              <h4 class="text-white font-semibold mb-2">Penetration Testing</h4>
+              <div class="w-full bg-neutral-700 rounded-full h-2">
+                <div class="bg-blue-500 h-2 rounded-full" style="width: 65%"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Future Plans -->
+        <div class="bg-neutral-800 rounded-xl p-8 border border-neutral-700 animate__animated animate__fadeInRight">
+          <div class="h-16 w-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center mb-6">
+            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+            </svg>
+          </div>
+          <h3 class="text-2xl font-bold text-white mb-4">Future Goals</h3>
+          <div class="space-y-4">
+            <div class="flex items-center space-x-4">
+              <div class="bg-purple-500/20 p-3 rounded-lg">
+                <svg class="w-6 h-6 text-purple-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                </svg>
+              </div>
+              <div>
+                <h4 class="text-white font-semibold">OSCP Certification</h4>
+                <p class="text-neutral-400 text-sm">Offensive Security Certified Professional</p>
+              </div>
+            </div>
+            <div class="flex items-center space-x-4">
+              <div class="bg-pink-500/20 p-3 rounded-lg">
+                <svg class="w-6 h-6 text-pink-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path>
+                </svg>
+              </div>
+              <div>
+                <h4 class="text-white font-semibold">Red Team Expert</h4>
+                <p class="text-neutral-400 text-sm">Advanced Penetration Testing</p>
+              </div>
+            </div>
+            <div class="flex items-center space-x-4">
+              <div class="bg-purple-500/20 p-3 rounded-lg">
+                <svg class="w-6 h-6 text-purple-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21l-7-5-7 5V5a2 2 0 012-2h10a2 2 0 012 2z"></path>
+                </svg>
+              </div>
+              <div>
+                <h4 class="text-white font-semibold">Security Research</h4>
+                <p class="text-neutral-400 text-sm">Zero-day Vulnerability Research</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+</htmlCode></element><element id="88b0be71-71b4-4dbe-8044-07d474c1b53c" data-section-id="88b0be71-71b4-4dbe-8044-07d474c1b53c">
+
+<htmlCode>
+<div id="root">
+  <section id="skills" class="py-20 bg-neutral-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16 animate__animated animate__fadeIn">
+        <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Skills Overview</h2>
+        <div class="w-20 h-1 bg-blue-500 mx-auto"></div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Design Skills -->
+        <div class="bg-neutral-900 rounded-xl p-8 hover:transform hover:scale-105 transition-duration-300 animate__animated animate__fadeInUp">
+          <div class="flex items-center mb-6">
+            <div class="w-12 h-12 bg-blue-500/20 rounded-lg flex items-center justify-center mr-4">
+              <svg class="w-6 h-6 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-white">Design Tools</h3>
+          </div>
+          <div class="space-y-4">
+            <div class="relative pt-1">
+              <div class="flex justify-between items-center mb-2">
+                <span class="text-white">Adobe Illustrator</span>
+                <span class="text-blue-500">90%</span>
+              </div>
+              <div class="w-full h-2 bg-neutral-700 rounded-full">
+                <div class="h-full w-[90%] bg-gradient-to-r from-blue-500 to-blue-400 rounded-full"></div>
+              </div>
+            </div>
+            <div class="relative pt-1">
+              <div class="flex justify-between items-center mb-2">
+                <span class="text-white">Photoshop</span>
+                <span class="text-blue-500">85%</span>
+              </div>
+              <div class="w-full h-2 bg-neutral-700 rounded-full">
+                <div class="h-full w-[85%] bg-gradient-to-r from-blue-500 to-blue-400 rounded-full"></div>
+              </div>
+            </div>
+            <div class="relative pt-1">
+              <div class="flex justify-between items-center mb-2">
+                <span class="text-white">Figma</span>
+                <span class="text-blue-500">95%</span>
+              </div>
+              <div class="w-full h-2 bg-neutral-700 rounded-full">
+                <div class="h-full w-[95%] bg-gradient-to-r from-blue-500 to-blue-400 rounded-full"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Video Skills -->
+        <div class="bg-neutral-900 rounded-xl p-8 hover:transform hover:scale-105 transition-duration-300 animate__animated animate__fadeInUp" style="animation-delay: 0.2s;">
+          <div class="flex items-center mb-6">
+            <div class="w-12 h-12 bg-green-500/20 rounded-lg flex items-center justify-center mr-4">
+              <svg class="w-6 h-6 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-white">Video Editing</h3>
+          </div>
+          <div class="space-y-4">
+            <div class="relative pt-1">
+              <div class="flex justify-between items-center mb-2">
+                <span class="text-white">Premiere Pro</span>
+                <span class="text-green-500">95%</span>
+              </div>
+              <div class="w-full h-2 bg-neutral-700 rounded-full">
+                <div class="h-full w-[95%] bg-gradient-to-r from-green-500 to-green-400 rounded-full"></div>
+              </div>
+            </div>
+            <div class="relative pt-1">
+              <div class="flex justify-between items-center mb-2">
+                <span class="text-white">After Effects</span>
+                <span class="text-green-500">80%</span>
+              </div>
+              <div class="w-full h-2 bg-neutral-700 rounded-full">
+                <div class="h-full w-[80%] bg-gradient-to-r from-green-500 to-green-400 rounded-full"></div>
+              </div>
+            </div>
+            <div class="relative pt-1">
+              <div class="flex justify-between items-center mb-2">
+                <span class="text-white">Motion Graphics</span>
+                <span class="text-green-500">85%</span>
+              </div>
+              <div class="w-full h-2 bg-neutral-700 rounded-full">
+                <div class="h-full w-[85%] bg-gradient-to-r from-green-500 to-green-400 rounded-full"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Security Skills -->
+        <div class="bg-neutral-900 rounded-xl p-8 hover:transform hover:scale-105 transition-duration-300 animate__animated animate__fadeInUp" style="animation-delay: 0.4s;">
+          <div class="flex items-center mb-6">
+            <div class="w-12 h-12 bg-red-500/20 rounded-lg flex items-center justify-center mr-4">
+              <svg class="w-6 h-6 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-white">Security</h3>
+          </div>
+          <div class="space-y-4">
+            <div class="relative pt-1">
+              <div class="flex justify-between items-center mb-2">
+                <span class="text-white">Penetration Testing</span>
+                <span class="text-red-500">85%</span>
+              </div>
+              <div class="w-full h-2 bg-neutral-700 rounded-full">
+                <div class="h-full w-[85%] bg-gradient-to-r from-red-500 to-red-400 rounded-full"></div>
+              </div>
+            </div>
+            <div class="relative pt-1">
+              <div class="flex justify-between items-center mb-2">
+                <span class="text-white">Bug Bounty</span>
+                <span class="text-red-500">80%</span>
+              </div>
+              <div class="w-full h-2 bg-neutral-700 rounded-full">
+                <div class="h-full w-[80%] bg-gradient-to-r from-red-500 to-red-400 rounded-full"></div>
+              </div>
+            </div>
+            <div class="relative pt-1">
+              <div class="flex justify-between items-center mb-2">
+                <span class="text-white">Network Security</span>
+                <span class="text-red-500">75%</span>
+              </div>
+              <div class="w-full h-2 bg-neutral-700 rounded-full">
+                <div class="h-full w-[75%] bg-gradient-to-r from-red-500 to-red-400 rounded-full"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+</htmlCode></element><element id="c10c795f-4d3f-4acf-9fff-6a8bbf5fd5eb" data-section-id="c10c795f-4d3f-4acf-9fff-6a8bbf5fd5eb">
+
+<htmlCode>
+<div id="root">
+  <section id="projects" class="py-20 bg-neutral-900">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16 animate__animated animate__fadeIn">
+        <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Featured Projects</h2>
+        <div class="w-20 h-1 bg-purple-500 mx-auto"></div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Cybersecurity Project -->
+        <div class="bg-neutral-800 rounded-xl overflow-hidden hover:transform hover:scale-105 transition-all duration-300 animate__animated animate__fadeInUp">
+          <div class="bg-gradient-to-r from-purple-500/20 to-blue-500/20 p-6 h-48 flex items-center justify-center">
+            <svg class="w-24 h-24 text-purple-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path>
+            </svg>
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-bold text-white mb-2">Security Analysis Tool</h3>
+            <p class="text-neutral-400 mb-4">Advanced penetration testing framework for web applications</p>
+            <div class="flex flex-wrap gap-2">
+              <span class="px-3 py-1 bg-purple-500/20 text-purple-400 rounded-full text-sm">Python</span>
+              <span class="px-3 py-1 bg-blue-500/20 text-blue-400 rounded-full text-sm">Security</span>
+              <span class="px-3 py-1 bg-green-500/20 text-green-400 rounded-full text-sm">API</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Video Project -->
+        <div class="bg-neutral-800 rounded-xl overflow-hidden hover:transform hover:scale-105 transition-all duration-300 animate__animated animate__fadeInUp" style="animation-delay: 0.2s;">
+          <div class="bg-gradient-to-r from-green-500/20 to-teal-500/20 p-6 h-48 flex items-center justify-center">
+            <svg class="w-24 h-24 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"></path>
+            </svg>
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-bold text-white mb-2">Motion Graphics Series</h3>
+            <p class="text-neutral-400 mb-4">Creative promotional video campaign with dynamic effects</p>
+            <div class="flex flex-wrap gap-2">
+              <span class="px-3 py-1 bg-green-500/20 text-green-400 rounded-full text-sm">After Effects</span>
+              <span class="px-3 py-1 bg-blue-500/20 text-blue-400 rounded-full text-sm">Premiere Pro</span>
+              <span class="px-3 py-1 bg-red-500/20 text-red-400 rounded-full text-sm">Animation</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Design Project -->
+        <div class="bg-neutral-800 rounded-xl overflow-hidden hover:transform hover:scale-105 transition-all duration-300 animate__animated animate__fadeInUp" style="animation-delay: 0.4s;">
+          <div class="bg-gradient-to-r from-red-500/20 to-orange-500/20 p-6 h-48 flex items-center justify-center">
+            <svg class="w-24 h-24 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"></path>
+            </svg>
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-bold text-white mb-2">Brand Identity System</h3>
+            <p class="text-neutral-400 mb-4">Complete visual identity design for tech startup</p>
+            <div class="flex flex-wrap gap-2">
+              <span class="px-3 py-1 bg-red-500/20 text-red-400 rounded-full text-sm">Illustrator</span>
+              <span class="px-3 py-1 bg-blue-500/20 text-blue-400 rounded-full text-sm">Photoshop</span>
+              <span class="px-3 py-1 bg-yellow-500/20 text-yellow-400 rounded-full text-sm">Branding</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project Stats -->
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mt-16">
+        <div class="text-center animate__animated animate__fadeIn" style="animation-delay: 0.6s;">
+          <div class="text-3xl font-bold text-purple-500 mb-2">15+</div>
+          <div class="text-neutral-400">Security Projects</div>
+        </div>
+        <div class="text-center animate__animated animate__fadeIn" style="animation-delay: 0.7s;">
+          <div class="text-3xl font-bold text-green-500 mb-2">25+</div>
+          <div class="text-neutral-400">Video Edits</div>
+        </div>
+        <div class="text-center animate__animated animate__fadeIn" style="animation-delay: 0.8s;">
+          <div class="text-3xl font-bold text-blue-500 mb-2">30+</div>
+          <div class="text-neutral-400">Design Projects</div>
+        </div>
+        <div class="text-center animate__animated animate__fadeIn" style="animation-delay: 0.9s;">
+          <div class="text-3xl font-bold text-red-500 mb-2">10+</div>
+          <div class="text-neutral-400">Bug Bounties</div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+</htmlCode></element><element id="506bb862-65ee-4713-9f46-331cd633398d" data-section-id="506bb862-65ee-4713-9f46-331cd633398d">
+
+<htmlCode>
+<div id="root">
+  <section id="contact" class="py-20 bg-neutral-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16 animate__animated animate__fadeIn">
+        <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Get In Touch</h2>
+        <div class="w-20 h-1 bg-blue-500 mx-auto"></div>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+        <!-- Contact Form -->
+        <div class="animate__animated animate__fadeInLeft">
+          <form class="space-y-6">
+            <div>
+              <label for="name" class="block text-white mb-2">Name</label>
+              <input type="text" id="name" name="name" class="w-full px-4 py-3 bg-neutral-900 border border-neutral-700 rounded-lg focus:outline-none focus:border-blue-500 text-white" required>
+            </div>
+            <div>
+              <label for="email" class="block text-white mb-2">Email</label>
+              <input type="email" id="email" name="email" class="w-full px-4 py-3 bg-neutral-900 border border-neutral-700 rounded-lg focus:outline-none focus:border-blue-500 text-white" required>
+            </div>
+            <div>
+              <label for="message" class="block text-white mb-2">Message</label>
+              <textarea id="message" name="message" rows="5" class="w-full px-4 py-3 bg-neutral-900 border border-neutral-700 rounded-lg focus:outline-none focus:border-blue-500 text-white" required></textarea>
+            </div>
+            <button type="submit" class="w-full py-3 px-6 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-colors">
+              Send Message
+            </button>
+          </form>
+        </div>
+
+        <!-- Contact Info -->
+        <div class="space-y-8 animate__animated animate__fadeInRight">
+          <div class="bg-neutral-900 p-8 rounded-xl border border-neutral-700">
+            <h3 class="text-2xl font-bold text-white mb-6">Connect With Me</h3>
+            
+            <div class="space-y-6">
+              <!-- Social Links -->
+              <a href="https://github.com" target="_blank" class="flex items-center space-x-4 text-white hover:text-blue-500 transition-colors group">
+                <div class="w-12 h-12 bg-neutral-800 group-hover:bg-blue-500/10 rounded-lg flex items-center justify-center">
+                  <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+                  </svg>
+                </div>
+                <span>GitHub</span>
+              </a>
+
+              <a href="https://linkedin.com" target="_blank" class="flex items-center space-x-4 text-white hover:text-blue-500 transition-colors group">
+                <div class="w-12 h-12 bg-neutral-800 group-hover:bg-blue-500/10 rounded-lg flex items-center justify-center">
+                  <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                  </svg>
+                </div>
+                <span>LinkedIn</span>
+              </a>
+
+              <a href="https://discord.com" target="_blank" class="flex items-center space-x-4 text-white hover:text-blue-500 transition-colors group">
+                <div class="w-12 h-12 bg-neutral-800 group-hover:bg-blue-500/10 rounded-lg flex items-center justify-center">
+                  <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M20.317 4.37a19.791 19.791 0 00-4.885-1.515.074.074 0 00-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 00-5.487 0 12.64 12.64 0 00-.617-1.25.077.077 0 00-.079-.037A19.736 19.736 0 003.677 4.37a.07.07 0 00-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 00.031.057 19.9 19.9 0 005.993 3.03.078.078 0 00.084-.028c.462-.63.874-1.295 1.226-1.994.021-.041.001-.09-.041-.106a13.107 13.107 0 01-1.872-.892.077.077 0 01-.008-.128 10.2 10.2 0 00.372-.292.074.074 0 01.077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 01.078.01c.12.098.246.198.373.292a.077.077 0 01-.006.127 12.299 12.299 0 01-1.873.892.077.077 0 00-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 00.084.028 19.839 19.839 0 006.002-3.03.077.077 0 00.032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 00-.031-.03zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.157 2.418z"/>
+                  </svg>
+                </div>
+                <span>Discord</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="bg-neutral-900 p-8 rounded-xl border border-neutral-700">
+            <h3 class="text-2xl font-bold text-white mb-6">Location</h3>
+            <p class="text-neutral-400">Based in India</p>
+            <p class="text-neutral-400">Available for Remote Work Worldwide</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+</htmlCode></element><element id="0ac8aebe-7bcd-4a89-abd3-7dde3ee4428e" data-section-id="0ac8aebe-7bcd-4a89-abd3-7dde3ee4428e">
+
+<htmlCode>
+<div id="root">
+    <footer id="footer" class="bg-neutral-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="space-y-4">
+                    <h3 class="text-xl font-bold mb-4">Himkar Singh</h3>
+                    <p class="text-neutral-400">Exploring the intersection of design, technology, and cybersecurity.</p>
+                </div>
+                <div class="space-y-4">
+                    <h3 class="text-xl font-bold mb-4">Connect</h3>
+                    <div class="flex flex-col space-y-2">
+                        <a href="#" class="text-neutral-400 hover:text-white transition-colors duration-300 flex items-center">
+                            <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                            GitHub
+                        </a>
+                        <a href="#" class="text-neutral-400 hover:text-white transition-colors duration-300 flex items-center">
+                            <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                            LinkedIn
+                        </a>
+                        <a href="#" class="text-neutral-400 hover:text-white transition-colors duration-300 flex items-center">
+                            <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24"><path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028c.462-.63.874-1.295 1.226-1.994.021-.041.001-.09-.041-.106a13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.157 2.418z"/></svg>
+                            Discord
+                        </a>
+                    </div>
+                </div>
+                <div class="space-y-4">
+                    <h3 class="text-xl font-bold mb-4">Skills</h3>
+                    <div class="text-neutral-400">
+                        <p>Graphics Design</p>
+                        <p>Video Editing</p>
+                        <p>Cybersecurity</p>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-neutral-800 mt-8 pt-8 text-center">
+                <p class="text-neutral-400">&copy; 2025 Himkar Singh. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</div>
+</htmlCode></element>
+            <div id="page_complete">
+            <script>
+                console.log('Page complete');
+            </script>
+            </body>
+            </html>
+          
